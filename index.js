@@ -17,6 +17,7 @@ io.on("connection", (socket) => {
   socket.on("hall", (payload) => {
     console.log("got hall from some client:", payload);
 
+    // 這邊先寫死抓到這邊的資料，發送到所有連線的客戶端
     io.emit("hall", payload);
   });
 });
